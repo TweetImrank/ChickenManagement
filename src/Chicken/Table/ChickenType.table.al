@@ -5,7 +5,8 @@ table 50121 ChickenType
 {
     DataClassification = CustomerContent;
     Caption = 'Chicken Type';
-
+    LookupPageId = "Chicken Types";
+    DrillDownPageId = "Chicken Types";
     fields
     {
         field(1; Code; Code[20])
