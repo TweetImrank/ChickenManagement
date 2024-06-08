@@ -24,6 +24,11 @@ table 50120 Chicken
             Caption = 'Chicken Type Code';
             TableRelation = ChickenType;
             DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            begin
+                Rec.CalcFields("Chicken Type Description");
+            end;
         }
         field(4; "Last Modified Date"; Date)
         {
@@ -34,6 +39,13 @@ table 50120 Chicken
         {
             Caption = 'Picture';
             DataClassification = CustomerContent;
+        }
+        field(6; "Chicken Type Description"; Text[100])
+        {
+            Caption = 'Chicken Type Description';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup(ChickenType.Description where(Code = field("Chicken Type Code")));
         }
     }
 

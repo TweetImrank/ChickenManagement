@@ -25,6 +25,11 @@ page 50120 "Chicken Card"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Chicken Type Code field.';
                 }
+                field("Chicken Type Description"; Rec."Chicken Type Description")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the desrcription of the Chicken Type Code';
+                }
                 field("Last Modified Date"; Rec."Last Modified Date")
                 {
                     ApplicationArea = All;
