@@ -34,16 +34,16 @@ table 50124 "Egg Production Line"
             Caption = 'Egg Production Date';
             DataClassification = CustomerContent;
         }
-        field(11; "Egg Production Code"; Code[20])
+        field(11; "Egg Type Code"; Code[20])
         {
-            Caption = 'Egg Production Code';
+            Caption = 'Egg Type Code';
             DataClassification = CustomerContent;
         }
         field(12; "Egg Production Description"; Text[100])
         {
             Caption = 'Egg Production Description';
             FieldClass = FlowField;
-            CalcFormula = lookup(EggType.Description where(Code = field("Egg Production Code")));
+            CalcFormula = lookup(EggType.Description where(Code = field("Egg Type Code")));
             Editable = false;
         }
         field(15; "Quantity"; Decimal)

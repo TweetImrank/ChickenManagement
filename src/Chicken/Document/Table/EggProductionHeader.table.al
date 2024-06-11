@@ -1,6 +1,7 @@
 table 50122 "Egg Production Header"
 {
     Caption = 'Egg Production Headaer';
+    LookupPageId = "Egg Production List";
     DataClassification = CustomerContent;
 
     fields
