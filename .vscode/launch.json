@@ -13,7 +13,8 @@
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "tenant": "c4d23a71-5d6b-42ae-a517-37568ac3480a"
+            "tenant": "c4d23a71-5d6b-42ae-a517-37568ac3480a",
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }

@@ -40,6 +40,11 @@ page 50120 "Chicken Card"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Picture field.';
                 }
+                field("Number of Eggs Produced"; Rec."Number of Eggs Produced")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specified Number of Eggs Produced by Chicken';
+                }
             }
         }
     }

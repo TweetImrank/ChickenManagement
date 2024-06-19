@@ -25,6 +25,11 @@ page 50121 "Chicken List"
                 {
                     ToolTip = 'Specifies the value of the Chicken Type Code field.';
                 }
+                field("Number of Eggs Produced"; Rec."Number of Eggs Produced")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specified Number of Eggs Produced by Chicken';
+                }
             }
         }
     }

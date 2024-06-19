@@ -1,15 +1,15 @@
-page 50124 "Egg Production Subpage"
+page 50127 "Egg Production Lines"
 {
-    PageType = ListPart;
+    PageType = List;
     SourceTable = "Egg Production Line";
-    AutoSplitKey = true;
-    DelayedInsert = true;
+
     layout
     {
         area(Content)
         {
-            repeater(General)
+            repeater(GroupName)
             {
+
                 field("Chicken No."; Rec."Chicken No.")
                 {
                     ApplicationArea = All;
@@ -20,21 +20,46 @@ page 50124 "Egg Production Subpage"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Chicken Description';
                 }
+                field("Document No."; Rec."Document No.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Document No. field.';
+                }
                 field("Egg Production Date"; Rec."Egg Production Date")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enter a value of the Egg Production Date';
                 }
-                field("Egg Type Code"; Rec."Egg Type Code")
+                field("Egg Production Description"; Rec."Egg Production Description")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Enter a value of Egg Type Code';
+                    ToolTip = 'Specifies the value of the Egg Production Description field.';
                 }
                 field(Quantity; Rec.Quantity)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enter number of Quatity of eggs produced';
                 }
+            }
+        }
+        area(Factboxes)
+        {
+
+        }
+    }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(ActionName)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+
+                end;
             }
         }
     }

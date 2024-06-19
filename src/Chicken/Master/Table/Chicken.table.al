@@ -47,6 +47,26 @@ table 50120 Chicken
             Editable = false;
             CalcFormula = lookup(ChickenType.Description where(Code = field("Chicken Type Code")));
         }
+        field(10; "Number of Eggs Produced"; Decimal)
+        {
+            Caption = 'Number of Eggs Produced';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = sum("Egg Production Line".Quantity where("Chicken No." = field("No."),
+                                                                    "Egg Production Date" = field("Date Filter"),
+                                                                    "Egg Type Code" = field("Egg Type Filter")));
+        }
+        field(15; "Date Filter"; Date)
+        {
+            Caption = 'Date Filter';
+            FieldClass = FlowFilter;
+        }
+        field(16; "Egg Type Filter"; Code[20])
+        {
+            Caption = 'Egg Type Filter';
+            FieldClass = FlowFilter;
+            TableRelation = EggType.Code;
+        }
     }
 
     keys
