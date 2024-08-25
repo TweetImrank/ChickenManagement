@@ -86,4 +86,15 @@ table 50120 Chicken
         {
         }
     }
+
+    trigger OnDelete()
+    var
+        EggProductionLine: Record "Egg Production Line";
+        ChicketHasEggsErr: Label 'The Chicken %1 %2 has eggs, you can''t detele it.', Comment = '%1 = Chicken No. ; %2 = Chicken Description';
+    begin
+        Clear(EggProductionLine);
+        EggProductionLine.SetRange("Chicken No.", "No.");
+        if not EggProductionLine.IsEmpty then
+            Error(ChicketHasEggsErr, "No.", Description);
+    end;
 }
